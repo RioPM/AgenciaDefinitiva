@@ -11,6 +11,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.WebServiceRef;
+import vuelo.VueloWS_Service;
 
 /**
  *
@@ -18,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/consultaPlazasLibresSOAP"})
 public class consultaPlazasLibresSOAP extends HttpServlet {
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/AgenciaWSDefinitiva/VueloWS.wsdl")
+    private VueloWS_Service service;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -47,7 +51,7 @@ public class consultaPlazasLibresSOAP extends HttpServlet {
             int fecha = Integer.parseInt(p);
             /* Crida a les operacions consulta i reserva */
             int ocupades = 0;
-            //ocupades = consultaLibres(idVuelo,fecha);
+            ocupades = consultaLibres(idVuelo,fecha);
             out.println("<br>");
             out.println("Ara n'hi ha "+ocupades+" ocupades");
             out.println("<br>");
@@ -97,5 +101,12 @@ public class consultaPlazasLibresSOAP extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private int consultaLibres(int idVuelo, int fecha) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        vuelo.VueloWS port = service.getVueloWSPort();
+        return port.consultaLibres(idVuelo, fecha);
+    }
 
 }

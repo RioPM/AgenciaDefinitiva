@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import hotel.HotelWS_Service;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.WebServiceRef;
 
 /**
  *
@@ -18,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/consultaHabLibresSOAP"})
 public class consultaHabLibresSOAP extends HttpServlet {
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/AgenciaWSDefinitiva/HotelWS.wsdl")
+    private HotelWS_Service service;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -47,9 +51,9 @@ public class consultaHabLibresSOAP extends HttpServlet {
             int fecha = Integer.parseInt(p);
             /* Crida a les operacions consulta i reserva */
             int ocupades = 0;
-            //ocupades = consultaLibres(idHotel,fecha);
+            ocupades = consultaLibres(idHotel,fecha);
             out.println("<br>");
-            out.println("Ara n'hi ha "+ocupades+" ocupades");
+            out.println("Ara n'hi ha "+ocupades+" lliures");
             out.println("<br>");
             out.println("<br> <a href=\"consultaHabLibres.html\">Tornar a la consulta d'habitacions lliures</a>");
             out.println("<br> <h3><a href=\"menu.html\">Tornar al menu</a></h3>");
@@ -97,5 +101,12 @@ public class consultaHabLibresSOAP extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private int consultaLibres(int idHotel, int fecha) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        hotel.HotelWS port = service.getHotelWSPort();
+        return port.consultaLibres(idHotel, fecha);
+    }
 
 }
