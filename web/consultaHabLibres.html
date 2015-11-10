@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Consulta d'habitacions lliures</title>
+    </head>
+    <body>
+        <h1>Consulta d'habitacions lliures amb SOAP</h1>
+        <h2>Seleccioni l'hotel i la data que vol consultar</h2>
+        <br>
+        <form action="ConsultaHabLibresSOAP" method="GET">
+            <table summary="">
+                <tr>
+                    <th>Identificador de l'hotel:</th>
+                    <td><input name=id_hotel size=20 maxlength=20></td>
+                    <th>Data:</th>
+                    <td><input name=fecha size=8 maxlength=8></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input name=Busca type=submit value="Buscar">
+            <br>
+        </form>
+        <br>
+        <br>
+        <h1>Consulta d'habitacions lliures amb REST</h1>
+        <h2>Seleccioni l'hotel i la data que vol consultar</h2>
+        <br>
+        <form action="ConsultaHabLibresREST" method="GET">
+            <table summary="">
+                <tr>
+                    <th>Identificador de l'hotel:</th>
+                    <td><input name=id_hotel size=20 maxlength=20></td>
+                    <th>Data:</th>
+                    <td><input name=fecha size=8 maxlength=8></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input name=Busca type=submit value="Buscar">
+            <br>
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+
+</html>
+

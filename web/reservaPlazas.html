@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Reserva de vol</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Reserva de vol amb SOAP</h1>
+        <form action="reservaPlazasSOAP" method="POST">
+        <table summary="">
+            <tr>
+            <th>Identificador del vol</th>
+            <td><select name=idVuelo>
+                    <option selected VALUE=1> 1</option>
+                    <option VALUE=2>2
+                </select>
+            </td>
+            <br>
+            <th>Data</th>
+            <td><select name=fecha>
+                    <option selected VALUE=6102015> 6102015</option>
+                    <option VALUE=7102015>7102015
+                </select>
+            </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <input name=Reservar type=submit value="Reservar">
+        </form>
+        <br>
+        <br>
+        <h1>Reserva de vol amb REST</h1>
+        <form action="reservaPlazasREST" method="POST">
+        <table summary="">
+            <tr>
+            <th>Identificador del vol</th>
+            <td><select name=idVuelo>
+                    <option selected VALUE=1> 1</option>
+                    <option VALUE=2>2
+                </select>
+            </td>
+            <br>
+            <th>Data</th>
+            <td><select name=fecha>
+                    <option selected VALUE=6102015> 6102015</option>
+                    <option VALUE=7102015>7102015
+                </select>
+            </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <input name=Reservar type=submit value="Reservar">
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+</html>

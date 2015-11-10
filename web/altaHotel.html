@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alta d'un nou hotel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <h1>Nou hotel</h1>
+        <h2>Introdueixi les dades del nou hotel</h2>
+        <form action="altaHotel" method="POST">
+            <table>
+                <tr>
+                    <th><u>Hotel</u></th>
+                </tr>
+                <tr>
+                    <th>Nom de l'hotel:</th>
+                    <td><input name=nom_hotel size=20 maxlength=20 value="NomHotel"></td>
+                    <th>Cadena hotelera:</th>
+                    <th><select name=companyia>
+                            <option selected VALUE=NH>NH
+                            <option VALUE=Iberostar>Iberostar
+                            <option VALUE=Sercotel>Sercotel
+                            <option VALUE=Husa>Husa
+                            <option VALUE=SolMelia>SolMelia
+                            <option VALUE=Accord>Accord
+                            <option VALUE=Hesperia>Hesperia
+                            <option VALUE=Silken>Silken
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th><u>Adreca de l'hotel</u></th>
+                </tr>
+                <tr> 
+                    <th>Carrer:</th>
+                    <td><input name=carrer size=20 maxlength=20 value="NouCarrer"></td>
+                    <th>Numero:</th>
+                    <td><input name=numero size=6 maxlength=6 value=77></td>
+                </tr>
+                <tr> 
+                    <th>Codi postal:</th>
+                    <td><input name=codi_postal size=5 maxlength=5 value="08880"></td>
+                    <th>Ciutat:</th>
+                    <td><input name=ciutat size=6 maxlength=6 value="Barcelona"></td>
+                </tr>
+                <tr> 
+                    <th>Provincia:</th>
+                    <td><input name=provincia size=20 maxlength=20 value="Barcelona"></td>
+                    <th>Pais:</th>
+                    <td><input name=pais size=20 maxlength=20 value="Espanya"></td>
+                </tr> 
+                <tr>
+                    <th>Numero d'habitacions:</th>
+                    <td><input name=num_habitacions size=5 maxlength=5 value="50"></td>
+                    <th>Estrelles:</th>
+                    <td><select name=clase>
+                            <option selected VALUE=1>*
+                            <option VALUE=2>**
+                            <option VALUE=3>***
+                            <option VALUE=4>****
+                            <option VALUE=5>*****
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input name=registrar type=submit value="Registrar">
+            <br>
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+</html>

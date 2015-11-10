@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Reserva d'habitacio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Reserva d'habitacio amb SOAP</h1>
+        <form action="reservaHabSOAP" method="POST">
+        <table summary="Reserva d'habitacio amb SOAP">
+            <tr>
+            <th>Identificador de l'hotel</th>
+            <td><select name=idHotel>
+                    <option selected VALUE=1> 1</option>
+                    <option VALUE=2>2
+                </select>
+            </td>
+            <br>
+            <th>Data</th>
+            <td><select name=fecha>
+                    <option selected VALUE=6102015> 6102015</option>
+                    <option VALUE=7102015>7102015
+                </select>
+            </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <input name=Reservar type=submit value="Reservar">
+        </form>
+        <br>
+        <br>
+        <h1>Reserva d'habitacio amb REST</h1>
+        <form action="reservaHabREST" method="POST">
+        <table summary="Reserva d'habitacio amb REST">
+            <tr>
+            <th>Identificador de l'hotel</th>
+            <td><select name=idHotel>
+                    <option selected VALUE=1> 1</option>
+                    <option VALUE=2>2
+                </select>
+            </td>
+            <br>
+            <th>Data</th>
+            <td><select name=fecha>
+                    <option selected VALUE=6102015> 6102015</option>
+                    <option VALUE=7102015>7102015
+                </select>
+            </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <input name=Reservar type=submit value="Reservar">
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+</html>

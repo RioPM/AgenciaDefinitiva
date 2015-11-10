@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Consulta de places lliures</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Consulta de places lliures amb SOAP</h1>
+        <h2>Seleccioni el vol i la data que vol consultar</h2>
+        <br>
+        <form action="consultaPlazasLibresSOAP" method="GET">
+            <table summary="">
+                <tr>
+                    <th>Identificador del vol:</th>
+                    <td><input name=idVuelo size=20 maxlength=20></td>
+                    <th>Data:</th>
+                    <td><input name=fecha size=8 maxlength=8></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input name=Busca type=submit value="Buscar">
+            <br>
+        </form>
+        <br>
+        <br>
+        <h1>Consulta de places lliures amb REST</h1>
+        <h2>Seleccioni el vol i la data que vol consultar</h2>
+        <br>
+        <form action="consultaPlazasLibresREST" method="GET">
+            <table summary="">
+                <tr>
+                    <th>Identificador del vol:</th>
+                    <td><input name=idVuelo size=20 maxlength=20></td>
+                    <th>Data:</th>
+                    <td><input name=fecha size=8 maxlength=8></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input name=Busca type=submit value="Buscar">
+            <br>
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+</html>

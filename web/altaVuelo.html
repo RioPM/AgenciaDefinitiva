@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alta d'un nou vol</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Nou vol</h1>
+        <h2>Introdueixi les dades del nou vol</h2>
+        <br>
+        <form action="altaVuelo" method="GET">
+            <table>
+                <tr>
+                    <th>Numero de vol:</th>
+                    <td><center><input name=numero_vol size=6 maxlength=6 value="000000"></center></td>
+                    <th>Companyia:</th>
+                    <!--<td><center><input name=companyia size=6 maxlength=6 value="000000"></center></td>-->
+                    <th><select name=companyia>
+                            <option selected VALUE=Iberia>Iberia
+                            <option VALUE=Vueling>Vueling
+                            <option VALUE=Ryanair>Ryanair
+                            <option VALUE=AirFrance>AirFrance
+                            <option VALUE=AirEuropa>AirEuropa
+                            <option VALUE=Lufthansa>Lufthansa
+                            <option VALUE=Qatar>Qatar
+                        </select>
+                    </th>
+                    
+                    
+                </tr>
+                <tr>
+                    <th>Ciutat d'origen:</th>
+                    <td><select name=origen>
+                            <option selected VALUE=Barcelona>Barcelona
+                            <option VALUE=Madrid>Madrid
+                            <option VALUE=Bilbao>Bilbao
+                            <option VALUE=Paris>Paris
+                            <option VALUE=Roma>Roma
+                            <option VALUE=Frankfurt>Frankfurt
+                            <option VALUE=Berlin>Berlin
+                            <option VALUE=Londres>Londres
+                            <option VALUE=Dublin>Dublin
+                            <option VALUE=Berna>Berna
+                            <option VALUE=Andorra>Andorra
+                        </select>
+                    </td>
+                    <th>Hora de sortida:</th>
+                    <td><select name=hora_sortida>
+                            <option selected VALUE=00>00
+                            <option VALUE=01>01
+                            <option VALUE=02>02
+                            <option VALUE=03>03
+                            <option VALUE=04>04
+                            <option VALUE=05>05
+                            <option VALUE=06>06
+                            <option VALUE=07>07
+                            <option VALUE=08>08
+                            <option VALUE=09>09
+                            <option VALUE=10>10
+                            <option VALUE=11>11
+                            <option VALUE=12>12
+                            <option VALUE=13>13
+                            <option VALUE=14>14
+                            <option VALUE=15>15
+                            <option VALUE=16>16
+                            <option VALUE=17>17
+                            <option VALUE=18>18
+                            <option VALUE=19>19
+                            <option VALUE=20>20
+                            <option VALUE=21>21
+                            <option VALUE=22>22
+                            <option VALUE=23>23
+                        </select>
+                    </td>
+                    <th>:</th>
+                    <td><select name=hora_sortida_mins>
+                            <option selected VALUE=Qualsevol>Qualsevol
+                            <option VALUE=00>00
+                            <option VALUE=05>05
+                            <option VALUE=15>15
+                            <option VALUE=20>20
+                            <option VALUE=25>25
+                            <option VALUE=30>30
+                            <option VALUE=35>35
+                            <option VALUE=40>40
+                            <option VALUE=45>45
+                            <option VALUE=50>50
+                            <option VALUE=55>55
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ciutat destí:</th>
+                    <td><select name=desti>
+                            <option selected VALUE=Barcelona>Barcelona
+                            <option VALUE=Madrid>Madrid
+                            <option VALUE=Bilbao>Bilbao
+                            <option VALUE=Paris>Paris
+                            <option VALUE=Roma>Roma
+                            <option VALUE=Frankfurt>Frankfurt
+                            <option VALUE=Berlin>Berlin
+                            <option VALUE=Londres>Londres
+                            <option VALUE=Dublin>Dublin
+                            <option VALUE=Berna>Berna
+                            <option VALUE=Andorra>Andorra
+                        </select>
+                    </td>
+                    <th>Hora d'arribada:</th>
+                    <td><select name=hora_arribada>
+                            <option selected VALUE=00>00
+                            <option VALUE=01>01
+                            <option VALUE=02>02
+                            <option VALUE=03>03
+                            <option VALUE=04>04
+                            <option VALUE=05>05
+                            <option VALUE=06>06
+                            <option VALUE=07>07
+                            <option VALUE=08>08
+                            <option VALUE=09>09
+                            <option VALUE=10>10
+                            <option VALUE=11>11
+                            <option VALUE=12>12
+                            <option VALUE=13>13
+                            <option VALUE=14>14
+                            <option VALUE=15>15
+                            <option VALUE=16>16
+                            <option VALUE=17>17
+                            <option VALUE=18>18
+                            <option VALUE=19>19
+                            <option VALUE=20>20
+                            <option VALUE=21>21
+                            <option VALUE=22>22
+                            <option VALUE=23>23
+                        </select>
+                    </td>
+                    <th>:</th>
+                    <td><select name=hora_sortida_mins>
+                            <option selected VALUE=Qualsevol>Qualsevol
+                            <option VALUE=00>00
+                            <option VALUE=05>05
+                            <option VALUE=15>15
+                            <option VALUE=20>20
+                            <option VALUE=25>25
+                            <option VALUE=30>30
+                            <option VALUE=35>35
+                            <option VALUE=40>40
+                            <option VALUE=45>45
+                            <option VALUE=50>50
+                            <option VALUE=55>55
+                        </select>
+                    </td>
+                </tr>                
+            </table>
+            <br>
+            <br>
+            <input name=registrar type=submit value="Registrar">
+            <br>
+        </form>
+        <br>
+        <h3><a href="menu.html">Tornar al menu</a></h3>
+    </body>
+</html>
