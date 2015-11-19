@@ -40,8 +40,8 @@ public class login extends HttpServlet {
         /* TODO output your page here. You may use following sample code. */
         Class.forName("org.sqlite.JDBC");
         Connection connection = null;
-        try{
-            connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Rio\\Dropbox\\UPC\\AD\\P2\\datasqlite3.db");
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Rio\\Dropbox\\UPC\\AD\\P5\\datasqlite.db");
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("select count (*) as total from usuaris where user = \""+ request.getParameter("usuari") +"\" and  password = \""+ request.getParameter("password") +"\"");
             
