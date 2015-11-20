@@ -111,7 +111,7 @@
                     <th>Ciutat destí:</th>
                     <td><select name=desti>
                             <option selected VALUE=Qualsevol> Qualsevol</option>
-                           <% rs = statement.executeQuery("select distinct desti from vols");
+                            <% rs = statement.executeQuery("select distinct desti from vols");
             
                             while(rs.next()){
                                 %>  <option VALUE= <% out.print(rs.getString("desti")); %> > <% out.print(rs.getString("desti"));%> </option>    <%
@@ -149,7 +149,7 @@
                         </select>
                     </td>
                     <th>:</th>
-                    <td><select name=hora_sortida_mins>
+                    <td><select name=hora_arribada_mins>
                             <option selected VALUE=Qualsevol>Qualsevol
                             <option VALUE=00>00
                             <option VALUE=05>05

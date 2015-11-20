@@ -91,23 +91,25 @@ public class buscarVuelo extends HttpServlet {
             }
             
             p = request.getParameter("hora_arribada");
-            out.println(p);
-            //if(!p.isEmpty()){
             if(!p.equals("Qualsevol")){
-                if(!parametre) query = query +" where ";
+                if(!parametre) query = query + " where ";
                 query = query +"hora_arribada = \""+ p +"\"";
                 parametre = true;
             }
-            /*
+            
+            p = request.getParameter("hora_sortida_mins");
+            if(!p.equals("Qualsevol")){
+                if(!parametre) query = query +" where ";
+                query = query +"hora_sortida_mins = \""+ p +"\"";
+                parametre = true;
+            }
+            
             p = request.getParameter("hora_arribada_mins");
-            out.println(p);
-            //if(!p.isEmpty()){
             if(!p.equals("Qualsevol")){
                 if(!parametre) query = query +" where ";
                 query = query +"hora_arribada_mins = \""+ p +"\"";
                 parametre = true;
             }
-            */
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Buscador de vols</title>");
@@ -128,14 +130,15 @@ public class buscarVuelo extends HttpServlet {
             out.println("<h1>Resultats de la busqueda - Vols</h1>");
             out.println("<table>");
             out.println("<tr>");
-            out.println("<th>Numero de vol</th><th>Companyia</th><th>Origen</th><th>Hora de sortida</th><th>Desti</th><th>Hora d'arribada</th>");
+            out.println("<th>Numero de vol</th><th>Companyia</th><th>Origen</th><th>Hora de sortida</th><th>Desti</th><th>Hora d'arribada</th><th>Mns de sortida</th><th>Mins d'arribada</th>");
             out.println("</tr>");
             
             //out.println(query);
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()){
                 out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+
-                        "</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6));
+                        "</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)
+                        +"</td><td>"+rs.getString(7)+"</td><td>"+rs.getString(8));
             }
             
             out.println("</table>");
