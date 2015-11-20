@@ -70,10 +70,10 @@ public class altaVuelo extends HttpServlet {
                                     request.getParameter("numero_vol") +"','"+
                                     request.getParameter("companyia") +"','"+
                                     request.getParameter("origen") +"','"+
-                                    request.getParameter("hora_sortida") +"','"+ 
-                                    request.getParameter("hora_sortida_mins") +"','"+                   
+                                    request.getParameter("hora_sortida") +"','"+
                                     request.getParameter("desti") +"','"+
                                     request.getParameter("hora_arribada") +"','"+
+                                    request.getParameter("hora_sortida_mins") +"','"+
                                     request.getParameter("hora_arribada_mins")+"');";
                             statement.executeUpdate(update);
                         }

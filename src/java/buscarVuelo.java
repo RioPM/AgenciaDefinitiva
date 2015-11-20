@@ -65,7 +65,7 @@ public class buscarVuelo extends HttpServlet {
                 
             }
             
-            p = request.getParameter("origen");
+            /*p = request.getParameter("origen");
             if(!"Qualsevol".equals(p)){
                 if(!parametre) query = query +" where ";
                 else query = query + " and ";
@@ -97,7 +97,7 @@ public class buscarVuelo extends HttpServlet {
                 parametre = true;
             }
             
-            p = request.getParameter("hora_sortida_mins");
+            /*p = request.getParameter("hora_sortida_mins");
             if(!p.equals("Qualsevol")){
                 if(!parametre) query = query +" where ";
                 query = query +"hora_sortida_mins = \""+ p +"\"";
@@ -109,7 +109,8 @@ public class buscarVuelo extends HttpServlet {
                 if(!parametre) query = query +" where ";
                 query = query +"hora_arribada_mins = \""+ p +"\"";
                 parametre = true;
-            }
+            }*/
+            
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Buscador de vols</title>");
@@ -128,6 +129,7 @@ public class buscarVuelo extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Resultats de la busqueda - Vols</h1>");
+            out.println("<table border=\"1\">");
             out.println("<table>");
             out.println("<tr>");
             out.println("<th>Numero de vol</th><th>Companyia</th><th>Origen</th><th>Hora de sortida</th><th>Desti</th><th>Hora d'arribada</th><th>Mns de sortida</th><th>Mins d'arribada</th>");
