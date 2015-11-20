@@ -120,7 +120,7 @@
                         </select>
                     </td>
                     <th>Hora d'arribada:</th>
-                    <td><select name=hora_arribada_mins>
+                    <td><select name=hora_arribada>
                             <option selected VALUE=Qualsevol>Qualsevol
                             <option VALUE=00>00
                             <option VALUE=01>01
